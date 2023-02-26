@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stye.css">
+    <title>Upload Image</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="card">
+            <h1>Person Image</h1>
+            <p>Image</p>
+            <img src="profile.png" alt="" id="profile-pic">
+            <label for="input-file">Upadate Image</label>
+            <input type="file" accept="image/png,image/jpg,image/jpeg" id="input-fie">
+        </div>  
+    </div>
+    <script>
+        let profilePic = document.getElementById("profile-pic");
+        let inputFie = document.getElementById("input-file");
+
+        inputFie.onchange = function(){
+            profilePic.src = URL.createObjectURL(inputFie.files[0]);    c
+        }
+    </script>
+</body>
+</html>
